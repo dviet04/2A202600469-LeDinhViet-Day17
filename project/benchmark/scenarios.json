@@ -1,79 +1,95 @@
 [
   {
-    "scenario": "Recall user name after 6 turns",
+    "scenario": "Store initial user profile (long-term seed)",
     "turns": [
       {"input": "My name is Linh."},
+      {"input": "I live in Hanoi."},
+      {"input": "My favorite food is pho."}
+    ]
+  },
+  {
+    "scenario": "Recall profile after unrelated conversation",
+    "turns": [
+      {"input": "Let's talk about movies."},
+      {"input": "I like Interstellar."},
       {"input": "What is my name?"},
-      {"input": "Tell me again."},
-      {"input": "And now?"},
-      {"input": "Still remember?"},
-      {"input": "Final check: who am I?"}
+      {"input": "Where do I live?"}
     ]
   },
   {
-    "scenario": "Allergy conflict update",
+    "scenario": "Overwrite preference with conflict",
     "turns": [
-      {"input": "I am allergic to milk."},
-      {"input": "Actually, I am allergic to soy, not milk."},
-      {"input": "What is my allergy?"}
-    ]
-  },
-  {
-    "scenario": "Recall previous debug lesson",
-    "turns": [
-      {"input": "I completed the debug lesson using docker service name."},
-      {"input": "What did I do in the last lesson?"}
-    ]
-  },
-  {
-    "scenario": "Retrieve FAQ chunk",
-    "turns": [
-      {"input": "What is the refund policy?"},
-      {"input": "Show me the FAQ about refund."}
-    ]
-  },
-  {
-    "scenario": "Profile recall after unrelated turns",
-    "turns": [
-      {"input": "My favorite color is blue."},
-      {"input": "Let's talk about something else."},
-      {"input": "What is my favorite color?"}
-    ]
-  },
-  {
-    "scenario": "Episodic recall after multiple events",
-    "turns": [
-      {"input": "I completed task A."},
-      {"input": "I completed task B."},
-      {"input": "What tasks have I completed?"}
-    ]
-  },
-  {
-    "scenario": "Semantic retrieval with keyword",
-    "turns": [
-      {"input": "Tell me about vector search."},
-      {"input": "What is vector search?"}
-    ]
-  },
-  {
-    "scenario": "Trim/token budget test",
-    "turns": [
-      {"input": "A"}, {"input": "B"}, {"input": "C"}, {"input": "D"}, {"input": "E"}, {"input": "F"}, {"input": "G"}, {"input": "H"}, {"input": "I"}, {"input": "J"}, {"input": "What did I say first?"}
-    ]
-  },
-  {
-    "scenario": "Profile overwrite with new info",
-    "turns": [
-      {"input": "My favorite food is pizza."},
-      {"input": "Actually, it's sushi."},
+      {"input": "My favorite food is sushi."},
+      {"input": "Actually, I prefer ramen."},
+      {"input": "No, sushi is better."},
       {"input": "What is my favorite food?"}
     ]
   },
   {
-    "scenario": "PII/privacy risk reflection",
+    "scenario": "Episodic memory with multiple events",
     "turns": [
-      {"input": "My phone number is 123456789."},
-      {"input": "Is my data safe?"}
+      {"input": "I completed task A."},
+      {"input": "I completed task B."},
+      {"input": "I went for lunch."},
+      {"input": "I completed task C."},
+      {"input": "What tasks have I completed?"}
+    ]
+  },
+  {
+    "scenario": "Episodic vs long-term distinction",
+    "turns": [
+      {"input": "Today I went to the gym."},
+      {"input": "What did I do today?"},
+      {"input": "What is my name?"}
+    ]
+  },
+  {
+    "scenario": "Semantic retrieval with FAQ and follow-up",
+    "turns": [
+      {"input": "What is your refund policy?"},
+      {"input": "Can I get a refund after 3 days?"},
+      {"input": "Explain again briefly."}
+    ]
+  },
+  {
+    "scenario": "Combine semantic knowledge with personal context",
+    "turns": [
+      {"input": "I bought a product yesterday."},
+      {"input": "Based on refund policy, can I return it?"},
+      {"input": "Explain based on my situation."}
+    ]
+  },
+  {
+    "scenario": "Long context trimming with important early fact",
+    "turns": [
+      {"input": "My secret code is 2468."},
+      {"input": "Talk A"},
+      {"input": "Talk B"},
+      {"input": "Talk C"},
+      {"input": "Talk D"},
+      {"input": "Talk E"},
+      {"input": "Talk F"},
+      {"input": "Talk G"},
+      {"input": "Talk H"},
+      {"input": "What is my secret code?"}
+    ]
+  },
+  {
+    "scenario": "Implicit recall from long-term memory",
+    "turns": [
+      {"input": "Let's talk about travel."},
+      {"input": "I want to visit Japan."},
+      {"input": "Where am I based?"}
+    ]
+  },
+  {
+    "scenario": "Chained reasoning + memory + overwrite check",
+    "turns": [
+      {"input": "I have 2 dogs."},
+      {"input": "Each dog has 3 puppies."},
+      {"input": "How many puppies do I have?"},
+      {"input": "Remind me what my favorite food is."},
+      {"input": "And what is my name?"}
     ]
   }
 ]

@@ -1,0 +1,783 @@
+[
+  {
+    "scenario_id": 1,
+    "scenario_name": "Store initial user profile (long-term seed)",
+    "description": "",
+    "turns_count": 3,
+    "no_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "My name is Linh.",
+          "output": "Hello, Linh! How can I assist you today?",
+          "timestamp": "2026-04-25T00:47:18.214818"
+        },
+        {
+          "turn": 2,
+          "input": "I live in Hanoi.",
+          "output": "That's great! Hanoi is a vibrant city with a rich history and culture. Whether you’re interested in exploring its historic sites like the Hoan Kiem Lake and the Old Quarter, trying delicious Vietnames",
+          "timestamp": "2026-04-25T00:47:20.773553"
+        },
+        {
+          "turn": 3,
+          "input": "My favorite food is pho.",
+          "output": "That's great! Pho is a delicious and comforting dish. Do you have a favorite type of pho, like beef (pho bo) or chicken (pho ga)? And do you enjoy adding any particular toppings or sauces to it?",
+          "timestamp": "2026-04-25T00:47:23.203332"
+        }
+      ]
+    },
+    "with_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "My name is Linh.",
+          "output": "Hello, Linh! How can I assist you today?",
+          "timestamp": "2026-04-25T00:47:06.671447"
+        },
+        {
+          "turn": 2,
+          "input": "I live in Hanoi.",
+          "output": "That's great, Linh! Hanoi is a vibrant city with a rich history and culture. Is there something specific you'd like to know or discuss about Hanoi?",
+          "timestamp": "2026-04-25T00:47:11.596355"
+        },
+        {
+          "turn": 3,
+          "input": "My favorite food is pho.",
+          "output": "Pho is a delicious choice, Linh! It's such a comforting and flavorful dish. Do you have a favorite place in Hanoi to enjoy pho, or do you like to make it at home?",
+          "timestamp": "2026-04-25T00:47:16.546923"
+        }
+      ],
+      "memory_state": {
+        "profile": {
+          "default_user": {
+            "name": "Linh"
+          }
+        },
+        "episodic": []
+      }
+    }
+  },
+  {
+    "scenario_id": 2,
+    "scenario_name": "Recall profile after unrelated conversation",
+    "description": "",
+    "turns_count": 4,
+    "no_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "Let's talk about movies.",
+          "output": "Sure! What aspect of movies are you interested in? We can discuss genres, recommendations, recent releases, classic films, directors, or anything else you have in mind!",
+          "timestamp": "2026-04-25T00:47:48.123909"
+        },
+        {
+          "turn": 2,
+          "input": "I like Interstellar.",
+          "output": "That's great to hear! \"Interstellar\" is a visually stunning film with a deep exploration of themes like love, sacrifice, and the vastness of space. Do you have a favorite scene or aspect of the movie ",
+          "timestamp": "2026-04-25T00:47:50.792830"
+        },
+        {
+          "turn": 3,
+          "input": "What is my name?",
+          "output": "I don’t know your name, but I’d be happy to learn it if you’d like to share! How can I assist you today?",
+          "timestamp": "2026-04-25T00:47:52.505370"
+        },
+        {
+          "turn": 4,
+          "input": "Where do I live?",
+          "output": "I’m not able to access personal information about you, so I can’t tell you where you live. However, if you provide me with some context or details, I might be able to help you with related information",
+          "timestamp": "2026-04-25T00:47:54.672559"
+        }
+      ]
+    },
+    "with_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "Let's talk about movies.",
+          "output": "Sure! What aspects of movies are you interested in? We can discuss genres, recent releases, classic films, directors, or anything else that comes to mind!",
+          "timestamp": "2026-04-25T00:47:28.680567"
+        },
+        {
+          "turn": 2,
+          "input": "I like Interstellar.",
+          "output": "That's great! \"Interstellar\" is a fascinating film with a lot to discuss. What specifically do you like about it? Is it the story, the visual effects, the score by Hans Zimmer, or something else?",
+          "timestamp": "2026-04-25T00:47:34.141830"
+        },
+        {
+          "turn": 3,
+          "input": "What is my name?",
+          "output": "Your name is Linh.",
+          "timestamp": "2026-04-25T00:47:41.230258"
+        },
+        {
+          "turn": 4,
+          "input": "Where do I live?",
+          "output": "I'm sorry, but I don't have that information. If you'd like to share where you live, feel free to let me know!",
+          "timestamp": "2026-04-25T00:47:45.975847"
+        }
+      ],
+      "memory_state": {
+        "profile": {
+          "default_user": {}
+        },
+        "episodic": []
+      }
+    }
+  },
+  {
+    "scenario_id": 3,
+    "scenario_name": "Overwrite preference with conflict",
+    "description": "",
+    "turns_count": 4,
+    "no_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "My favorite food is sushi.",
+          "output": "That's great! Sushi is a delicious and diverse cuisine. Do you have a favorite type of sushi, like nigiri, sashimi, or rolls? If you're looking to try something new, I can also recommend some popular ",
+          "timestamp": "2026-04-25T00:48:15.747654"
+        },
+        {
+          "turn": 2,
+          "input": "Actually, I prefer ramen.",
+          "output": "Ramen is a fantastic choice! There are so many varieties to explore, from classic shoyu to spicy miso or rich tonkotsu. Do you have a favorite type or a go-to place for ramen? If you’re interested, I ",
+          "timestamp": "2026-04-25T00:48:18.256179"
+        },
+        {
+          "turn": 3,
+          "input": "No, sushi is better.",
+          "output": "That's a great choice! Sushi offers a variety of flavors and textures, and it's a favorite for many. Do you have a specific type of sushi you enjoy the most, like nigiri, sashimi, or rolls? Or do you ",
+          "timestamp": "2026-04-25T00:48:20.298478"
+        },
+        {
+          "turn": 4,
+          "input": "What is my favorite food?",
+          "output": "I’m not sure what your favorite food is, but I’d love to help you figure it out! Do you have any specific cuisines or dishes you particularly enjoy? Or perhaps a favorite type of meal, like breakfast,",
+          "timestamp": "2026-04-25T00:48:22.418795"
+        }
+      ]
+    },
+    "with_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "My favorite food is sushi.",
+          "output": "That's great! Sushi is a delicious choice. Do you have a favorite type of sushi or a specific sushi restaurant you love?",
+          "timestamp": "2026-04-25T00:47:59.350133"
+        },
+        {
+          "turn": 2,
+          "input": "Actually, I prefer ramen.",
+          "output": "Ramen is a fantastic choice! There are so many different styles and flavors to explore. Do you have a favorite type of ramen or a go-to place where you like to get it?",
+          "timestamp": "2026-04-25T00:48:04.187740"
+        },
+        {
+          "turn": 3,
+          "input": "No, sushi is better.",
+          "output": "It sounds like you really love sushi! What do you enjoy most about it? Is it the variety of flavors, the freshness of the ingredients, or something else?",
+          "timestamp": "2026-04-25T00:48:08.797133"
+        },
+        {
+          "turn": 4,
+          "input": "What is my favorite food?",
+          "output": "Based on our recent conversation, it seems that you enjoy sushi, but you also mentioned that you prefer ramen. It looks like you appreciate both! If you'd like to clarify which one you consider your a",
+          "timestamp": "2026-04-25T00:48:13.590286"
+        }
+      ],
+      "memory_state": {
+        "profile": {
+          "default_user": {}
+        },
+        "episodic": []
+      }
+    }
+  },
+  {
+    "scenario_id": 4,
+    "scenario_name": "Episodic memory with multiple events",
+    "description": "",
+    "turns_count": 5,
+    "no_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "I completed task A.",
+          "output": "That's great to hear! Completing tasks is always a good feeling. If you need assistance with the next steps or if there's anything else you'd like to work on or discuss, feel free to let me know!",
+          "timestamp": "2026-04-25T00:48:49.966554"
+        },
+        {
+          "turn": 2,
+          "input": "I completed task B.",
+          "output": "That's great to hear! Completing tasks is always a positive step forward. If there's anything specific you’d like to discuss about task B or if you need help with the next steps, feel free to let me k",
+          "timestamp": "2026-04-25T00:48:51.930263"
+        },
+        {
+          "turn": 3,
+          "input": "I went for lunch.",
+          "output": "That sounds nice! What did you have for lunch?",
+          "timestamp": "2026-04-25T00:48:53.698317"
+        },
+        {
+          "turn": 4,
+          "input": "I completed task C.",
+          "output": "Great job on completing task C! If you need assistance with the next steps or if there's anything specific you'd like to discuss or review, feel free to let me know!",
+          "timestamp": "2026-04-25T00:48:55.884802"
+        },
+        {
+          "turn": 5,
+          "input": "What tasks have I completed?",
+          "output": "To help you better, could you provide more context? For example, are you referring to tasks related to work, personal projects, or something else? If you can share details about the tasks you've been ",
+          "timestamp": "2026-04-25T00:48:57.965647"
+        }
+      ]
+    },
+    "with_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "I completed task A.",
+          "output": "That's great to hear, Linh! Completing tasks can feel really rewarding. What’s next on your to-do list?",
+          "timestamp": "2026-04-25T00:48:27.548120"
+        },
+        {
+          "turn": 2,
+          "input": "I completed task B.",
+          "output": "That's fantastic, Linh! You're making great progress. What do you have planned next?",
+          "timestamp": "2026-04-25T00:48:32.529242"
+        },
+        {
+          "turn": 3,
+          "input": "I went for lunch.",
+          "output": "That sounds nice, Linh! A good lunch can be a great way to recharge. What did you have for lunch?",
+          "timestamp": "2026-04-25T00:48:37.167719"
+        },
+        {
+          "turn": 4,
+          "input": "I completed task C.",
+          "output": "That's wonderful, Linh! You've been very productive. What are you planning to tackle next?",
+          "timestamp": "2026-04-25T00:48:41.832626"
+        },
+        {
+          "turn": 5,
+          "input": "What tasks have I completed?",
+          "output": "You've completed the following tasks:\n\n1. Task A\n2. Task B\n3. Task C\n\nGreat job on your productivity! If there's anything else you need help with or if you want to plan your next tasks, just let me kn",
+          "timestamp": "2026-04-25T00:48:46.620307"
+        }
+      ],
+      "memory_state": {
+        "profile": {
+          "default_user": {}
+        },
+        "episodic": [
+          {
+            "event": "completed task A",
+            "session_id": "ac1b2d85-cb25-491f-8b57-1306ca731c94"
+          },
+          {
+            "event": "completed task B",
+            "session_id": "a45cff1b-c524-4137-8959-16afc1a00282"
+          },
+          {
+            "event": "went for lunch",
+            "session_id": "2c04360b-312f-4088-b107-9bdad358fb8e"
+          },
+          {
+            "event": "completed task C",
+            "session_id": "98437846-7fbc-4f5c-a6f6-e178d634ce8e"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "scenario_id": 5,
+    "scenario_name": "Episodic vs long-term distinction",
+    "description": "",
+    "turns_count": 3,
+    "no_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "Today I went to the gym.",
+          "output": "That's great to hear! How was your workout? Did you try anything new or stick to your usual routine?",
+          "timestamp": "2026-04-25T00:49:14.552719"
+        },
+        {
+          "turn": 2,
+          "input": "What did I do today?",
+          "output": "I’m not able to access your personal activities, but I can help you reflect on your day! Think about what you did this morning, any meetings or tasks you completed, meals you had, and any interactions",
+          "timestamp": "2026-04-25T00:49:17.247229"
+        },
+        {
+          "turn": 3,
+          "input": "What is my name?",
+          "output": "I'm sorry, but I don't have access to personal information, including your name. How can I assist you today?",
+          "timestamp": "2026-04-25T00:49:18.886456"
+        }
+      ]
+    },
+    "with_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "Today I went to the gym.",
+          "output": "That's great to hear, Linh! How was your workout at the gym? Did you try anything new or stick to your usual routine?",
+          "timestamp": "2026-04-25T00:49:03.857803"
+        },
+        {
+          "turn": 2,
+          "input": "What did I do today?",
+          "output": "Today, you went to the gym. If there's anything else you did or if you want to share more about your day, feel free to let me know!",
+          "timestamp": "2026-04-25T00:49:08.413303"
+        },
+        {
+          "turn": 3,
+          "input": "What is my name?",
+          "output": "Your name is Linh!",
+          "timestamp": "2026-04-25T00:49:12.708101"
+        }
+      ],
+      "memory_state": {
+        "profile": {
+          "default_user": {}
+        },
+        "episodic": [
+          {
+            "event": "completed task A",
+            "session_id": "ac1b2d85-cb25-491f-8b57-1306ca731c94"
+          },
+          {
+            "event": "completed task B",
+            "session_id": "a45cff1b-c524-4137-8959-16afc1a00282"
+          },
+          {
+            "event": "went for lunch",
+            "session_id": "2c04360b-312f-4088-b107-9bdad358fb8e"
+          },
+          {
+            "event": "completed task C",
+            "session_id": "98437846-7fbc-4f5c-a6f6-e178d634ce8e"
+          },
+          {
+            "event": "went to the gym",
+            "session_id": "a6a7e124-1d5a-4b64-a4bf-0c3a3700ecde"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "scenario_id": 6,
+    "scenario_name": "Semantic retrieval with FAQ and follow-up",
+    "description": "",
+    "turns_count": 3,
+    "no_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "What is your refund policy?",
+          "output": "Our refund policy varies depending on the product or service you purchased. Generally, we offer a full refund within 30 days of purchase if you are not satisfied. For items that are used or opened, we",
+          "timestamp": "2026-04-25T00:49:37.101148"
+        },
+        {
+          "turn": 2,
+          "input": "Can I get a refund after 3 days?",
+          "output": "Whether you can get a refund after 3 days depends on the store's return policy or the terms of the service you purchased. Many retailers have specific time frames for refunds or exchanges, which can r",
+          "timestamp": "2026-04-25T00:49:41.171501"
+        },
+        {
+          "turn": 3,
+          "input": "Explain again briefly.",
+          "output": "Sure! Please let me know what specific topic or information you would like me to explain again, and I'll provide a brief summary.",
+          "timestamp": "2026-04-25T00:49:42.978679"
+        }
+      ]
+    },
+    "with_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "What is your refund policy?",
+          "output": "It seems like you are asking about a refund policy, but I would need more context to provide a specific answer. Refund policies can vary widely depending on the company or service in question. If you ",
+          "timestamp": "2026-04-25T00:49:24.462312"
+        },
+        {
+          "turn": 2,
+          "input": "Can I get a refund after 3 days?",
+          "output": "Whether you can get a refund after 3 days depends on the specific refund policy of the company or service you are dealing with. Many businesses have a time frame for refunds, which can range from a fe",
+          "timestamp": "2026-04-25T00:49:29.791020"
+        },
+        {
+          "turn": 3,
+          "input": "Explain again briefly.",
+          "output": "Refund eligibility after 3 days depends on the specific company's policy. Many businesses have varying time frames for refunds, so it's best to check their terms or contact customer service for accura",
+          "timestamp": "2026-04-25T00:49:34.262880"
+        }
+      ],
+      "memory_state": {
+        "profile": {
+          "default_user": {}
+        },
+        "episodic": []
+      }
+    }
+  },
+  {
+    "scenario_id": 7,
+    "scenario_name": "Combine semantic knowledge with personal context",
+    "description": "",
+    "turns_count": 3,
+    "no_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "I bought a product yesterday.",
+          "output": "That's great! What did you buy? If you have any questions about it or need assistance, feel free to ask!",
+          "timestamp": "2026-04-25T00:50:04.135961"
+        },
+        {
+          "turn": 2,
+          "input": "Based on refund policy, can I return it?",
+          "output": "To determine whether you can return the item based on the refund policy, please check the following key points:\n\n1. **Return Window**: How long do you have to initiate a return? Most policies specify ",
+          "timestamp": "2026-04-25T00:50:07.938162"
+        },
+        {
+          "turn": 3,
+          "input": "Explain based on my situation.",
+          "output": "Of course! Please share the details of your situation, and I'll do my best to provide helpful advice or support.",
+          "timestamp": "2026-04-25T00:50:10.181544"
+        }
+      ]
+    },
+    "with_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "I bought a product yesterday.",
+          "output": "That's great! What product did you buy?",
+          "timestamp": "2026-04-25T00:49:48.174955"
+        },
+        {
+          "turn": 2,
+          "input": "Based on refund policy, can I return it?",
+          "output": "To determine if you can return the product based on the refund policy, you'll need to check a few things:\n\n1. **Time Frame**: Most stores have a specific period within which returns are accepted (e.g.",
+          "timestamp": "2026-04-25T00:49:54.985661"
+        },
+        {
+          "turn": 3,
+          "input": "Explain based on my situation.",
+          "output": "Based on your recent purchase, here’s how you can evaluate your situation regarding the return of the product:\n\n1. **Time Frame**: Since you bought the product yesterday, you are likely still within t",
+          "timestamp": "2026-04-25T00:50:02.286363"
+        }
+      ],
+      "memory_state": {
+        "profile": {
+          "default_user": {}
+        },
+        "episodic": [
+          {
+            "event": "completed task A",
+            "session_id": "ac1b2d85-cb25-491f-8b57-1306ca731c94"
+          },
+          {
+            "event": "completed task B",
+            "session_id": "a45cff1b-c524-4137-8959-16afc1a00282"
+          },
+          {
+            "event": "went for lunch",
+            "session_id": "2c04360b-312f-4088-b107-9bdad358fb8e"
+          },
+          {
+            "event": "completed task C",
+            "session_id": "98437846-7fbc-4f5c-a6f6-e178d634ce8e"
+          },
+          {
+            "event": "went to the gym",
+            "session_id": "a6a7e124-1d5a-4b64-a4bf-0c3a3700ecde"
+          },
+          {
+            "event": "bought a product yesterday",
+            "session_id": "c763597f-47b1-416d-b80f-240c70ff0374"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "scenario_id": 8,
+    "scenario_name": "Long context trimming with important early fact",
+    "description": "",
+    "turns_count": 10,
+    "no_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "My secret code is 2468.",
+          "output": "It looks like you've shared a code! If you need help with it, please let me know what you’d like assistance with—whether it's about using the code, security tips, or anything else related.",
+          "timestamp": "2026-04-25T00:51:04.163703"
+        },
+        {
+          "turn": 2,
+          "input": "Talk A",
+          "output": "Of course! How can I assist you today?",
+          "timestamp": "2026-04-25T00:51:05.841711"
+        },
+        {
+          "turn": 3,
+          "input": "Talk B",
+          "output": "Of course! How can I assist you today?",
+          "timestamp": "2026-04-25T00:51:07.548094"
+        },
+        {
+          "turn": 4,
+          "input": "Talk C",
+          "output": "Of course! How can I assist you today?",
+          "timestamp": "2026-04-25T00:51:09.220973"
+        },
+        {
+          "turn": 5,
+          "input": "Talk D",
+          "output": "Sure! What would you like to discuss or talk about regarding \"D\"? If you could provide a bit more context or specify what you're interested in, I'd be happy to help!",
+          "timestamp": "2026-04-25T00:52:11.767528"
+        },
+        {
+          "turn": 6,
+          "input": "Talk E",
+          "output": "Of course! How can I assist you today?",
+          "timestamp": "2026-04-25T00:52:13.433009"
+        },
+        {
+          "turn": 7,
+          "input": "Talk F",
+          "output": "Sure! How can I assist you today? If you have any questions or topics you'd like to discuss, feel free to share!",
+          "timestamp": "2026-04-25T00:52:15.233220"
+        },
+        {
+          "turn": 8,
+          "input": "Talk G",
+          "output": "Of course! How can I assist you today?",
+          "timestamp": "2026-04-25T00:52:16.950137"
+        },
+        {
+          "turn": 9,
+          "input": "Talk H",
+          "output": "Sure! How can I assist you today? If you have any questions or topics you'd like to discuss, feel free to share!",
+          "timestamp": "2026-04-25T00:52:18.924780"
+        },
+        {
+          "turn": 10,
+          "input": "What is my secret code?",
+          "output": "I'm sorry, but I can't access or provide personal information, including codes or passwords. If you've forgotten your secret code, I recommend checking any recovery options available or contacting the",
+          "timestamp": "2026-04-25T00:52:20.956037"
+        }
+      ]
+    },
+    "with_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "My secret code is 2468.",
+          "output": "It looks like you've shared your secret code again. Is there something specific you'd like to do with it or any questions you have?",
+          "timestamp": "2026-04-25T00:50:15.244443"
+        },
+        {
+          "turn": 2,
+          "input": "Talk A",
+          "output": "It seems like you mentioned \"Talk A.\" Could you clarify what you'd like to discuss or share about it? I'm here to help!",
+          "timestamp": "2026-04-25T00:50:20.613770"
+        },
+        {
+          "turn": 3,
+          "input": "Talk B",
+          "output": "It seems like you're interested in discussing \"Talk B.\" Could you provide more details or specify what aspects of Talk B you'd like to focus on? Whether it's a topic, an event, or something else entir",
+          "timestamp": "2026-04-25T00:50:25.437567"
+        },
+        {
+          "turn": 4,
+          "input": "Talk C",
+          "output": "It looks like you want to discuss \"Talk C.\" Could you provide more details about what you'd like to talk about regarding this topic? Whether it's a specific event, ideas, or any other aspect, I'm here",
+          "timestamp": "2026-04-25T00:50:30.109616"
+        },
+        {
+          "turn": 5,
+          "input": "Talk D",
+          "output": "It seems like you're interested in \"Talk D.\" Could you provide more details on what you'd like to discuss regarding this topic? Are there specific points, ideas, or events related to Talk D that you w",
+          "timestamp": "2026-04-25T00:50:35.628756"
+        },
+        {
+          "turn": 6,
+          "input": "Talk E",
+          "output": "It seems you're interested in \"Talk E.\" Could you share more about what specific aspects or topics related to Talk E you want to discuss? Whether it's an event, ideas, or anything else, I'm here to he",
+          "timestamp": "2026-04-25T00:50:41.140172"
+        },
+        {
+          "turn": 7,
+          "input": "Talk F",
+          "output": "It looks like you're interested in \"Talk F.\" Could you tell me more about what specific aspects or topics related to Talk F you want to discuss? I'm here to assist with any details or ideas you have i",
+          "timestamp": "2026-04-25T00:50:46.310242"
+        },
+        {
+          "turn": 8,
+          "input": "Talk G",
+          "output": "It seems you're interested in \"Talk G.\" What specific aspects or topics regarding Talk G would you like to explore? Whether it's details, ideas, or anything else, I'm here to help!",
+          "timestamp": "2026-04-25T00:50:51.700447"
+        },
+        {
+          "turn": 9,
+          "input": "Talk H",
+          "output": "It seems you're interested in \"Talk H.\" What specific topics or aspects of Talk H would you like to discuss? Whether it's details, ideas, or anything else, I'm here to assist!",
+          "timestamp": "2026-04-25T00:50:56.601832"
+        },
+        {
+          "turn": 10,
+          "input": "What is my secret code?",
+          "output": "It looks like you’re asking about a secret code, but I don’t have that information available in your profile. If you have a specific code in mind or need help creating one, let me know!",
+          "timestamp": "2026-04-25T00:51:02.178805"
+        }
+      ],
+      "memory_state": {
+        "profile": {
+          "default_user": {}
+        },
+        "episodic": []
+      }
+    }
+  },
+  {
+    "scenario_id": 9,
+    "scenario_name": "Implicit recall from long-term memory",
+    "description": "",
+    "turns_count": 3,
+    "no_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "Let's talk about travel.",
+          "output": "Of course! Travel is such an exciting topic. Are you looking for destination recommendations, travel tips, packing advice, or something else? Let me know what you have in mind!",
+          "timestamp": "2026-04-25T00:52:38.939586"
+        },
+        {
+          "turn": 2,
+          "input": "I want to visit Japan.",
+          "output": "That sounds like an exciting trip! Japan is a beautiful country with a rich culture, stunning landscapes, and delicious food. Here are a few tips to help you plan your visit:\n\n1. **Best Time to Visit*",
+          "timestamp": "2026-04-25T00:52:44.385633"
+        },
+        {
+          "turn": 3,
+          "input": "Where am I based?",
+          "output": "I'm not able to determine your location. If you share your city or region, I can provide information or assistance related to that area!",
+          "timestamp": "2026-04-25T00:52:46.319265"
+        }
+      ]
+    },
+    "with_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "Let's talk about travel.",
+          "output": "Travel is such an exciting topic! Are you planning a trip soon, or do you have a favorite destination you'd like to share?",
+          "timestamp": "2026-04-25T00:52:25.931320"
+        },
+        {
+          "turn": 2,
+          "input": "I want to visit Japan.",
+          "output": "That sounds amazing! Japan has so much to offer, from its rich history and culture to stunning landscapes and delicious cuisine. Do you have specific places in Japan that you'd like to visit, or certa",
+          "timestamp": "2026-04-25T00:52:31.423165"
+        },
+        {
+          "turn": 3,
+          "input": "Where am I based?",
+          "output": "I don't have information about your current location. If you'd like to share where you're based, I can provide more tailored recommendations or information!",
+          "timestamp": "2026-04-25T00:52:36.123059"
+        }
+      ],
+      "memory_state": {
+        "profile": {
+          "default_user": {}
+        },
+        "episodic": []
+      }
+    }
+  },
+  {
+    "scenario_id": 10,
+    "scenario_name": "Chained reasoning + memory + overwrite check",
+    "description": "",
+    "turns_count": 5,
+    "no_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "I have 2 dogs.",
+          "output": "That's great! Dogs can bring so much joy and companionship. What breeds are they, and how do they get along with each other? If you have any questions about their care or training, feel free to ask!",
+          "timestamp": "2026-04-25T00:53:13.732705"
+        },
+        {
+          "turn": 2,
+          "input": "Each dog has 3 puppies.",
+          "output": "That sounds adorable! If each dog has 3 puppies, then you can easily calculate the total number of puppies by multiplying the number of dogs by 3. For example, if you have 5 dogs, you would have 5 x 3",
+          "timestamp": "2026-04-25T00:53:15.853761"
+        },
+        {
+          "turn": 3,
+          "input": "How many puppies do I have?",
+          "output": "I’m not sure how many puppies you have since I don’t have that information. If you’d like, you can tell me about them or share how many you have!",
+          "timestamp": "2026-04-25T00:53:17.815232"
+        },
+        {
+          "turn": 4,
+          "input": "Remind me what my favorite food is.",
+          "output": "I'm sorry, but I don't have access to your personal preferences or past conversations. If you tell me what your favorite food is, I can help you with recipes or suggestions related to it!",
+          "timestamp": "2026-04-25T00:53:19.753892"
+        },
+        {
+          "turn": 5,
+          "input": "And what is my name?",
+          "output": "I'm sorry, but I don't know your name. If you'd like to share it, feel free! How can I assist you today?",
+          "timestamp": "2026-04-25T00:53:21.566094"
+        }
+      ]
+    },
+    "with_memory": {
+      "outputs": [
+        {
+          "turn": 1,
+          "input": "I have 2 dogs.",
+          "output": "That's great! What are their names?",
+          "timestamp": "2026-04-25T00:52:52.202251"
+        },
+        {
+          "turn": 2,
+          "input": "Each dog has 3 puppies.",
+          "output": "That's so adorable! What are the names of the puppies?",
+          "timestamp": "2026-04-25T00:52:57.284323"
+        },
+        {
+          "turn": 3,
+          "input": "How many puppies do I have?",
+          "output": "You have a total of 6 puppies since each of your 2 dogs has 3 puppies.",
+          "timestamp": "2026-04-25T00:53:02.755812"
+        },
+        {
+          "turn": 4,
+          "input": "Remind me what my favorite food is.",
+          "output": "I don't have any information about your favorite food yet. If you tell me what it is, I can remember it for you!",
+          "timestamp": "2026-04-25T00:53:07.296734"
+        },
+        {
+          "turn": 5,
+          "input": "And what is my name?",
+          "output": "Your name is Linh.",
+          "timestamp": "2026-04-25T00:53:11.749166"
+        }
+      ],
+      "memory_state": {
+        "profile": {
+          "default_user": {}
+        },
+        "episodic": []
+      }
+    }
+  }
+]
