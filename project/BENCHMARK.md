@@ -2,7 +2,6 @@
 
 ## Executive Summary
 
-- **Report Generated**: 2026-04-25 01:24:52
 - **Total Scenarios**: 10
 - **Total Turns Executed**: 43
 - **Memory Stack Tested**: Short-term, Profile, Episodic, Semantic
